@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title><%- title %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Example app">
+	<meta name="author" content="Hans Findel">
+	<link href="stylesheets/boot_m.css" media="all" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="masthead">
+			<h3 class="text-muted">Express example</h3>
+			<ul class="nav navbar-nav nav-justified main_links">
+				<li><a href="/" class="">Home</a></li>
+				<li><a href="http://expressjs.com/">Express</a></li>
+				<li><a href="examples">Examples</a></li>
+			</ul>
+		</div>
+      
+		<div class="jumbotron">
+			<%- body %>
+		</div>
+		
+		<hr>
+		<footer>
+			<p style="float:left;">© 2013</p>
+		</footer>
+	</div>
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</body></html>
