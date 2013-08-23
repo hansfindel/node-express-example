@@ -1,6 +1,6 @@
 #Ejemplo de la ayudantía
 
-Puede bajarlo o 'forkearlo' para estudiarlo en mayor detalle. 
+Puede bajarlo, clonarlo o 'forkearlo' para estudiarlo en mayor detalle. 
 
 Recuerde que para hacerlo correr debe instalar las dependencias y correr el servidor. Para eso ejecuten los siguientes comandos:
 
