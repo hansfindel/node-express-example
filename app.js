@@ -31,7 +31,7 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-/*
+
 function useSlowHandler(){
   app.use(function slowHandler(req, res, next) { 
     var waitTime=Math.floor(Math.random()*250);
@@ -42,8 +42,6 @@ function useSlowHandler(){
   });	
 }
 //useSlowHandler();
-*/
-
 
 
 // Routes
