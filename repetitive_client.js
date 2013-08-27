@@ -82,7 +82,39 @@ var callback = function(message){
 		console.log(message);
 		var count = memory["count"]
 		if(count){
-			memory["count"] = count + 1;		
+			memory["count"] = count = count + 1;		
+			console.log("inside invoke")
+		}else{
+			memory["count"] = 1;
+			count = 1;
+		}
+		console.log(red, "count=", count, reset)
+		if(count < 5){
+			compositeService.data = memory;
+			invoke(compositeService, callback(message))	
+		}
+		console.log(blue, "memory", reset, "=", red, memory, reset);
+	}
+}
+
+
+//main 
+console.log("repetitive_1");
+first  = callback("El primero")
+second = callback("El segundo")
+third  = callback("El tercero")
+invoke( compositeService, first);
+invoke( compositeService, second);
+invoke( compositeService, third);
+console.log("2")
+
+/*
+function normal_request(){
+		var count = memory["count"]
+		if(count){
+			memory["count"] = count = count + 1;		
+			console.log("inside invoke")
+			console.log("count", count)
 		}else{
 			memory["count"] = 1;
 			count = 1;
@@ -93,13 +125,5 @@ var callback = function(message){
 		}
 		console.log(blue, "memory", reset, "=", red, memory, reset);
 	}
-}
-
-
-//main 
-console.log("repetitive_1");
-
-invoke( compositeService, callback("El primero"));
-invoke( compositeService, callback("El segundo"));
-invoke( compositeService, callback("El tercero"));
-console.log("2")
+invoke(compositeService, normal_request)
+*/

@@ -53,8 +53,8 @@ app.get('/examples', function(req, res) {
 
 app.get('/json_callback', function(req, res){
 	//console.log(req)//headers route url method
-	console.log(req.route)
-	console.log(req.headers)
+	//console.log(req.route)
+	//console.log(req.headers)
 	res.json({"hi": "holo"})
 });
 
