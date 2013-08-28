@@ -91,6 +91,7 @@ var callback = function(message){
 		console.log(red, "count=", count, reset)
 		if(count < 5){
 			compositeService.data = memory;
+			//notar la llamada recursiva a callback(message)
 			invoke(compositeService, callback(message))	
 		}
 		console.log(blue, "memory", reset, "=", red, memory, reset);
@@ -109,6 +110,7 @@ invoke( compositeService, third);
 console.log("2")
 
 /*
+por si quieres probar sin la función creadora de funciones
 function normal_request(){
 		var count = memory["count"]
 		if(count){
@@ -121,7 +123,8 @@ function normal_request(){
 		}
 		if(count < 5){
 			compositeService.data = memory;
-			invoke(compositeService, callback)	
+			// notar que el callback en este caso es el mismo nombre del método
+			invoke(compositeService, normal_request)	
 		}
 		console.log(blue, "memory", reset, "=", red, memory, reset);
 	}
